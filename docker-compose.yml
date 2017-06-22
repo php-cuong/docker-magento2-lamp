@@ -5,7 +5,7 @@ mysql:
   environment:
     MYSQL_ROOT_PASSWORD: pw
   volumes:
-    - ./data/mysql:/var/lib/mysql
+    - ./database/mysql:/var/lib/mysql
   container_name: mysql_service
 phpmyadmin:
   image: phpmyadmin/phpmyadmin

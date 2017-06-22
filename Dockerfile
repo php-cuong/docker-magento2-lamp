@@ -21,6 +21,8 @@ RUN a2enmod rewrite
 RUN rm -rf /etc/apache2/apache2.conf
 COPY configs/apache2.conf /etc/apache2/
 RUN service apache2 restart
+RUN chmod go-rwx /var/www/html
+RUN chmod go+x /var/www/html
 
 # PHP
 RUN apt-get install -y php7.0 libapache2-mod-php7.0 php7.0 php7.0-common php7.0-gd php7.0-mysql php7.0-mcrypt php7.0-curl php7.0-intl php7.0-xsl php7.0-mbstring php7.0-zip php7.0-bcmath php7.0-iconv
