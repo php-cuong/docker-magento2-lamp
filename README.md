@@ -7,7 +7,7 @@ Double-click InstallDocker.msi to run the installer.
 
 ## Installing
 
-Step 1: Install the Docker container
+### Step 1: Install the Docker container
 
 	- Git clone https://github.com/php-cuong/docker-magento2-lamp.git
 	- Open the docker-compose.yml file and change volumes following the path on your computer, if you enjoy.
@@ -22,7 +22,7 @@ Step 1: Install the Docker container
 	  - docker ps -a
 	  - docker-compose ps
 
-Step 2: Install Magento 2 on Docker container.
+### Step 2: Install Magento 2 on Docker container.
 
 1. Create a host for running Magento 2
 
@@ -60,7 +60,7 @@ Step 2: Install Magento 2 on Docker container.
 		- database: magento.2.1.7
 	- Finish the steps for installing Magento 2.
 
-Step 3: ssh into the apache2_service container
+### Step 3: ssh into the apache2_service container
 
 	- docker exec -it apache2_service bin/bash
 	- cd /var/www/html/
@@ -68,8 +68,6 @@ Step 3: ssh into the apache2_service container
 	- php bin/magento cache:flush
 	- php bin/magento cache:clean
 
-Step 4: Test and see the results
+### Step 4: Test and see the results
 
-## Thank for your watching!, I hope this video will save your time. Don't forget to subscribe my channel for getting the newest videos.
-
-## Please do not hesitate to contact me if you need me to join your Magento project. My rate is $25/hour in Magento 1 and $30/hour in Magento 2.
+## Do not hesitate to contact me if you need me to join your Magento project. My rate is $25/hour in Magento 1 and $30/hour in Magento 2.
