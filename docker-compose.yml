@@ -25,5 +25,5 @@ apache2:
   links:
     - mysql
   volumes:
-    - E:/developer:/var/www/html
+    - .magento2:/var/www/html
   container_name: apache2_service
