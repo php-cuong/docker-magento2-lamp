@@ -67,6 +67,6 @@ php bin/magento cache:clean
 
 Step 4: Test and see the results
 
-##Thank for your watching!, I hope this video will save your time. Don't forget to subscribe my channel for getting the newest videos.
+## Thank for your watching!, I hope this video will save your time. Don't forget to subscribe my channel for getting the newest videos.
 
-##Please do not hesitate to contact me if you need me to join your Magento project. My rate is $25/hour in Magento 1 and $30/hour in Magento 2.
+## Please do not hesitate to contact me if you need me to join your Magento project. My rate is $25/hour in Magento 1 and $30/hour in Magento 2.
