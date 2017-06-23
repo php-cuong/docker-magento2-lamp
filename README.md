@@ -1,5 +1,5 @@
 # docker-magento2-lamp
-Setup the server for running Magento 2
+How to install Magento 2 on Docker container
 
 ## Requirements
 You need to install [docker](https://store.docker.com/editions/community/docker-ce-desktop-windows)
