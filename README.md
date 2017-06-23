@@ -15,12 +15,12 @@ Step 1: Install the Docker container
 - Type cmd and Run as administrator
 - Switch to the path contains the data git clone.
 - Run the following command line:
-  docker pull phpcuong/magento2-apache2
-  docker-compose up -d
+  - docker pull phpcuong/magento2-apache2
+  - docker-compose up -d
 - The additional information, run the following command line:
-  docker images
-  docker ps -a
-  docker-compose ps
+  - docker images
+  - docker ps -a
+  - docker-compose ps
 
 Step 2: Install Magento 2 on Docker container.
 
@@ -29,8 +29,8 @@ Step 2: Install Magento 2 on Docker container.
 - On your Windows 10, go to the path C:\Windows\System32\drivers\etc, open the hosts file
 - Insert the new row: 127.0.0.1 magento.giaphugroup.com and press the ctrl + s for saving the new data. If you can't save the hosts file, please change the permission.
 - On your browser, press https://localhost:10000, log in with the account information: 
-Username: root
-Password: root
+	- Username: root
+	- Password: root
 - Create new virtual host
 
 2. Download Magento 2.
@@ -43,8 +43,8 @@ Password: root
 
 3. Create a database
 - On your browser, press https://localhost:8080, log in with the account information: 
-Username: root
-Password: pw
+	- Username: root
+	- Password: pw
 - Create the database name magento.2.1.7.
 - Another way, I use the HeidiSQL software connect to mysql on my localhost
 - If you do not install this software yet, please see https://www.heidisql.com/download.php
@@ -52,10 +52,10 @@ Password: pw
 4. Install Magento 2
 - On your browser press http://magento.giaphugroup.com
 - The information for connecting to mysql.
-host: mysql
-username: root
-password: pw
-database: magento.2.1.7
+	- host: mysql
+	- username: root
+	- password: pw
+	- database: magento.2.1.7
 - Finish the steps for installing Magento 2.
 
 Step 3: ssh into the apache2_service container
