@@ -8,7 +8,7 @@ Double-click InstallDocker.msi to run the installer.
 Docker Magento 2 LAMP included
  - Apache 2.4.18
  - PHP 7.0.18
- - MySQL 5.7.18 
+ - MySQL 5.7.18
    - host: localhost
    - post: 3306
    - username: root
@@ -26,7 +26,7 @@ Docker Magento 2 LAMP included
 
 Used for Magento 1 and Magento 2
 
-## See the video How to Install Magento 2 with Docker container on Windows 10 
+## See the video How to Install Magento 2 with Docker container on Windows 10
 [https://www.youtube.com/watch?v=w7YV2pyN9d4](https://www.youtube.com/watch?v=w7YV2pyN9d4)
 
 ## Installing
@@ -52,7 +52,7 @@ Used for Magento 1 and Magento 2
 
 	- On your Windows 10, go to the path C:\Windows\System32\drivers\etc, open the hosts file
 	- Insert the new row: 127.0.0.1 magento.giaphugroup.com and press the ctrl + s for saving the new data. If you can't save the hosts file, please change the permission.
-	- On your browser, press https://localhost:10000, log in with the account information: 
+	- On your browser, press https://localhost:10000, log in with the account information:
 		- Username: root
 		- Password: root
 	- Create new virtual host
@@ -67,9 +67,9 @@ Used for Magento 1 and Magento 2
 
 3. Create a database
 
-	- On your browser, press https://localhost:8080, log in with the account information: 
+	- On your browser, press https://localhost:8080, log in with the account information:
 		- Username: root
-		- Password: pw
+		- Password: giaphugroup
 	- Create the database name magento.2.1.7.
 	- Another way, I use the HeidiSQL software connect to mysql on my localhost
 	- If you do not install this software yet, please see https://www.heidisql.com/download.php
@@ -80,7 +80,7 @@ Used for Magento 1 and Magento 2
 	- The information for connecting to mysql.
 		- host: mysql
 		- username: root
-		- password: pw
+		- password: giaphugroup
 		- database: magento.2.1.7
 	- Finish the steps for installing Magento 2.
 
@@ -95,3 +95,8 @@ Used for Magento 1 and Magento 2
 ### Step 4: Test and see the results
 
 ## Do not hesitate to contact me if you need me to join your Magento project. My rate is $25/hour in Magento 1 and $30/hour in Magento 2.
+
+### Contact with the owner of this extension
+	- skype: cuongnq87
+	- facebook: https://www.facebook.com/giaphugroupcom/
+	- email: bestearnmoney87@gmail.com
