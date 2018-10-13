@@ -39,7 +39,6 @@ Used for Magento 1 and Magento 2
 	- Type cmd and Run as administrator
 	- Switch to the path contains the data git clone.
 	- Run the following command line:
-	  - docker pull phpcuong/magento2-apache2
 	  - docker-compose up -d
 	- The additional information, run the following command line:
 	  - docker images
