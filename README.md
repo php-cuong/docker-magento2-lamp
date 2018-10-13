@@ -2,7 +2,7 @@
 How to install Magento 2 on Docker container
 
 ## Requirements
-You need to install [docker](https://store.docker.com/editions/community/docker-ce-desktop-windows)
+You need to install [docker ce version 17.06.2](https://docs.docker.com/docker-for-windows/release-notes/#docker-community-edition-17062-ce-win27-2017-09-06)
 Double-click InstallDocker.msi to run the installer.
 
 Docker Magento 2 LAMP included
