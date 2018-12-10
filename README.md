@@ -9,7 +9,7 @@ Docker Magento 2 LAMP included
  - Apache 2.4.18
  - PHP 7.0.18
  - MySQL 5.7.18
-   - host: localhost
+   - host: mysql
    - post: 3306
    - username: root
    - password: giaphugroup
