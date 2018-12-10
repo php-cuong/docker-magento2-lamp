@@ -24,10 +24,10 @@ Docker Magento 2 LAMP included
  - Composer
  - Git
 
-Used for Magento 1 and Magento 2
+Used for Magento 2
 
 ## See the video How to Install Magento 2 with Docker container on Windows 10
-[https://www.youtube.com/watch?v=w7YV2pyN9d4](https://www.youtube.com/playlist?list=PL98CDCbI3TNvPczWSOnpaMoyxVISLVzYQ)
+[https://www.youtube.com/playlist?list=PL98CDCbI3TNvPczWSOnpaMoyxVISLVzYQ](https://www.youtube.com/playlist?list=PL98CDCbI3TNvPczWSOnpaMoyxVISLVzYQ)
 
 ## Installing
 
@@ -87,7 +87,7 @@ Used for Magento 1 and Magento 2
 
 	- docker exec -it apache2_service bin/bash
 	- cd /var/www/html/
-	- php bin/magento setup:static-content:deploy
+	- php bin/magento setup:static-content:deploy -f
 	- php bin/magento cache:flush
 	- php bin/magento cache:clean
 
@@ -98,4 +98,5 @@ Used for Magento 1 and Magento 2
 ### Contact with the owner of this extension
 	- skype: cuongnq87
 	- facebook: https://www.facebook.com/giaphugroupcom/
+	- youtube: https://youtube.com/giaphugroupcom/
 	- email: bestearnmoney87@gmail.com
