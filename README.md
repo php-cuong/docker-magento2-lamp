@@ -27,7 +27,7 @@ Docker Magento 2 LAMP included
 Used for Magento 1 and Magento 2
 
 ## See the video How to Install Magento 2 with Docker container on Windows 10
-[https://www.youtube.com/watch?v=w7YV2pyN9d4](https://www.youtube.com/watch?v=w7YV2pyN9d4)
+[https://www.youtube.com/watch?v=w7YV2pyN9d4](https://www.youtube.com/playlist?list=PL98CDCbI3TNvPczWSOnpaMoyxVISLVzYQ)
 
 ## Installing
 
