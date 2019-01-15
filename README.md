@@ -100,3 +100,7 @@ Thank you for your watching. If you have any questions about this practice, plea
 Don't forget to like, comment, share my videos and subscribe to my channel for getting the latest videos.
 
 Please do not hesitate to contact me, if you need me to join your Magento project. My rate is $25/hour in Magento 1 and $30/hour in Magento 2.
+
+## See the video about this lesson
+1. Youtube: https://www.youtube.com/watch?v=akcaOBrLTzM&list=PL98CDCbI3TNvPczWSOnpaMoyxVISLVzYQ
+
