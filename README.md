@@ -35,7 +35,7 @@ Let's do this practice, you need to follow steps by step:
 Go to the link https://docs.docker.com/docker-for-windows/release-notes/#docker-community-edition-17062-ce-win27-2017-09-06 for downloading the docker CE 17.06.2
 
 ## Step 2: Create the docker containers from docker-compose.yml
-- Before creating the docker containers, you must share the local drives where you will save the source codes for your projects. Go to Docker ? Settings ? Shared Drivers, select the local drives you want to be available to your containers.
+- Before creating the docker containers, you must share the local drives where you will save the source codes for your projects. Go to Docker -> Settings -> Shared Drivers, select the local drives you want to be available to your containers.
 - Move to the local drive that you are working on it, don't use the C drive, because all your data will be lost if you re-install windows.
 - Git clone https://github.com/php-cuong/docker-magento2-lamp.git
 - Open the docker-compose.yml file and change volumes following the path on your computer
@@ -50,37 +50,46 @@ Run the command line: docker ps -a
 - Before downloading and installing Magento 2.2.6, you must sure the server meet the minimum following requirements:
 Apache 2.4
 MySQL 5.7
-PHP 7.0.13–7.0.x or 7.1.x
+PHP 7.0.13â€“7.0.x or 7.1.x
 - Accessing the server where you will install Magento 2.2.6
+
 1. Where having the PHP, Apache2, Webmin
-Run the command line: docker exec -it apache2_service bin/bash
-php -v, apache2 -v
-Webmin: https://127.0.0.1:10000
-username: root
-password: root
+- Run the command line: docker exec -it apache2_service bin/bash
+- php -v, apache2 -v
+- Webmin: https://127.0.0.1:10000
+- username: root
+- password: root
 
 2. Where having the MySQL
-Run the command line: docker exec -it mysql_service bin/bash
-Run the command line: mysql -u root -p, enter the password "giaphugroup"
-Create the new database named magento.2.2.6
+- Run the command line: docker exec -it mysql_service bin/bash
+- Run the command line: mysql -u root -p, enter the password "giaphugroup"
+- Create the new database named magento.2.2.6
 - Downloading the Magento 2.2.6, go to the link https://magento.com/tech-resources/download
 - On your windows, move to the D drive, create the folder named magento/2.2.x/2.2.6, then copy the zip file just downloaded to this folder and unzip the file.
 - Create a host for running Magento 2.3
+
 On your Windows 10 Pro 64bit, go to the path C:\Windows\System32\drivers\etc, open the hosts file
 Insert the new row: 127.0.0.1 magento-en.2.2.6.giaphugroup.com and press the ctrl + s for saving the new data. If you can't save the hosts file, please change the permission.
+
 On your browser, press https://localhost:10000, log in with the account information:
+
 Username: root
 Password: root
-Then Go to the Webmin ? Servers ? Apache Webserver ? Create virtual host ? Create a New Virtual Server
-- Accessing the container has the PHP, Apache2, Webmin. Then restart apache2
-Run the command line: service apache2 restart
+
+Then Go to the Webmin -> Servers -> Apache Webserver -> Create virtual host -> Create a New Virtual Server
+
+- Accessing the container has the PHP, Apache2, Webmin. Then restart apache2, Run the command line: service apache2 restart
 - Install Magento 2.2.6
+
 On your browser, press http://magento-en.2.2.6.giaphugroup.com
+
 The information for connecting to mysql.
-host: mysql
-username: root
-password: giaphugroup
-database: magento.2.2.6
+
+- host: mysql
+- username: root
+- password: giaphugroup
+- database: magento.2.2.6
+
 - Deploy static content
 Run the command line: php bin/magento setup:static-content:deploy
 
