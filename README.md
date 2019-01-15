@@ -103,4 +103,5 @@ Please do not hesitate to contact me, if you need me to join your Magento projec
 
 ## See the video about this lesson
 1. Youtube: https://www.youtube.com/watch?v=akcaOBrLTzM&list=PL98CDCbI3TNvPczWSOnpaMoyxVISLVzYQ
+2. Facebook: https://www.facebook.com/giaphugroupcom/videos/2236992436576130/
 
