@@ -12,7 +12,7 @@ Today, I show you the Docker software, this software will help you to develop Ma
 Before doing this practice, you must sure your computer meets the following requirements.
 
 ## The basic System Requirements:
-- Windows 10 64bit: Pro, Enterprise or Education (1607 Anniversary Update, Build 14393 or later). You can check Windows 10 Build Version on your computer by going to Run → enter the winver.
+- Windows 10 64bit: Pro, Enterprise or Education (1607 Anniversary Update, Build 14393 or later). You can check Windows 10 Build Version on your computer by going to Run ? enter the winver.
 - Virtualization is enabled in BIOS. Typically, virtualization is enabled by default. This is different from having Hyper-V enabled. For more detail see Virtualization must be enabled in Troubleshooting.
 https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization-must-be-enabled
 - At least 4GB of RAM.
@@ -35,7 +35,7 @@ Let's do this practice, you need to follow steps by step:
 Go to the link https://docs.docker.com/docker-for-windows/release-notes/#docker-community-edition-17062-ce-win27-2017-09-06 for downloading the docker CE 17.06.2
 
 ## Step 2: Create the docker containers from docker-compose.yml
-- Before creating the docker containers, you must share the local drives where you will save the source codes for your projects. Go to Docker → Settings → Shared Drivers, select the local drives you want to be available to your containers.
+- Before creating the docker containers, you must share the local drives where you will save the source codes for your projects. Go to Docker ? Settings ? Shared Drivers, select the local drives you want to be available to your containers.
 - Move to the local drive that you are working on it, don't use the C drive, because all your data will be lost if you re-install windows.
 - Git clone https://github.com/php-cuong/docker-magento2-lamp.git
 - Open the docker-compose.yml file and change volumes following the path on your computer
@@ -50,7 +50,7 @@ Run the command line: docker ps -a
 - Before downloading and installing Magento 2.2.6, you must sure the server meet the minimum following requirements:
 Apache 2.4
 MySQL 5.7
-PHP 7.0.13–7.0.x or 7.1.x
+PHP 7.0.13�7.0.x or 7.1.x
 - Accessing the server where you will install Magento 2.2.6
 1. Where having the PHP, Apache2, Webmin
 Run the command line: docker exec -it apache2_service bin/bash
@@ -71,7 +71,7 @@ Insert the new row: 127.0.0.1 magento-en.2.2.6.giaphugroup.com and press the ctr
 On your browser, press https://localhost:10000, log in with the account information:
 Username: root
 Password: root
-Then Go to the Webmin → Servers → Apache Webserver → Create virtual host → Create a New Virtual Server
+Then Go to the Webmin ? Servers ? Apache Webserver ? Create virtual host ? Create a New Virtual Server
 - Accessing the container has the PHP, Apache2, Webmin. Then restart apache2
 Run the command line: service apache2 restart
 - Install Magento 2.2.6
