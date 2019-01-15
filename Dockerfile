@@ -25,7 +25,11 @@ RUN chmod go-rwx /var/www/html
 RUN chmod go+x /var/www/html
 
 # PHP
-RUN apt-get install -y php7.0 libapache2-mod-php7.0 php7.0 php7.0-common php7.0-gd php7.0-mysql php7.0-mcrypt php7.0-curl php7.0-intl php7.0-xsl php7.0-mbstring php7.0-zip php7.0-bcmath php7.0-iconv php-soap
+RUN apt-get -y update
+RUN apt-get -y install software-properties-common
+RUN add-apt-repository ppa:ondrej/php
+RUN apt-get -y update
+RUN apt-get -y install php7.1 libapache2-mod-php7.1 php7.1-common php7.1-gd php7.1-mysql php7.1-mcrypt php7.1-curl php7.1-intl php7.1-xsl php7.1-mbstring php7.1-zip php7.1-bcmath php7.1-iconv php7.1-soap
 
 # Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
@@ -47,7 +51,7 @@ RUN /etc/init.d/webmin start
 RUN /usr/share/webmin/changepass.pl /etc/webmin root root
 
 # Start
-EXPOSE 80 10000
+EXPOSE 80 10000 443
 RUN cd /sbin
 RUN touch run.sh
 RUN echo "#!/bin/bash" >> run.sh

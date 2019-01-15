@@ -1,102 +1,93 @@
 # docker-magento2-lamp
-How to install Magento 2 on Docker container
+How to install Magento 2 with Docker Compose on Windows 10 Pro
 
-## Requirements
-You need to install [docker](https://store.docker.com/editions/community/docker-ce-desktop-windows)
-Double-click InstallDocker.msi to run the installer.
+Hi everybody, I am Cuong, Welcome back to my Magento 2 tutorial video series.
 
-Docker Magento 2 LAMP included
- - Apache 2.4.18
- - PHP 7.0.18
- - MySQL 5.7.18
-   - host: localhost
-   - post: 3306
-   - username: root
-   - password: giaphugroup
- - Webmin 1.840
-   - https://localhost:10000
-   - username: root
-   - password: root
- - phpmyadmin 4.7.1
-   - http://localhost:8080
-   - username: root
-   - password: giaphugroup
- - Composer
- - Git
+Today, I am going to show everybody the best practice, How to install Magento 2 with Docker Compose on Windows 10 Pro.
 
-Used for Magento 1 and Magento 2
+You have a computer using the Operation system Windows 10 Professional, you are using the XAMPP or Vagrant for developing Magento 2, you see it working very slowly, you can't complete your tasks fast. Then you are searching for another platform replacing XAMPP or Vagrant to work faster.
 
-## See the video How to Install Magento 2 with Docker container on Windows 10
-[https://www.youtube.com/watch?v=w7YV2pyN9d4](https://www.youtube.com/watch?v=w7YV2pyN9d4)
+Today, I show you the Docker software, this software will help you to develop Magento 2 faster than XAMPP and Vagrant, I think it is faster 80 percent. Also, you can be used the Ubuntu directly on the Operation system Windows for developing Magento 2 by using the Docker.
 
-## Installing
+Before doing this practice, you must sure your computer meets the following requirements.
 
-### Step 1: Install the Docker container
+## The basic System Requirements:
+- Windows 10 64bit: Pro, Enterprise or Education (1607 Anniversary Update, Build 14393 or later). You can check Windows 10 Build Version on your computer by going to Run → enter the winver.
+- Virtualization is enabled in BIOS. Typically, virtualization is enabled by default. This is different from having Hyper-V enabled. For more detail see Virtualization must be enabled in Troubleshooting.
+https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization-must-be-enabled
+- At least 4GB of RAM.
+- Git is installed on windows 10 Pro, go to the link for downloading https://git-scm.com/download/win
+- Docker Community Edition 17.06.2-ce-win27 is installed, go to the link for downloading https://docs.docker.com/docker-for-windows/release-notes/#docker-community-edition-17062-ce-win27-2017-09-06
 
-	- Git clone https://github.com/php-cuong/docker-magento2-lamp.git
-	- Open the docker-compose.yml file and change volumes following the path on your computer, if you enjoy.
-	- On your Windows 10 press the Windows+S keys to open search.
-	- Type cmd and Run as administrator
-	- Switch to the path contains the data git clone.
-	- Run the following command line:
-	  - docker pull phpcuong/magento2-apache2
-	  - docker-compose up -d
-	- The additional information, run the following command line:
-	  - docker images
-	  - docker ps -a
-	  - docker-compose ps
+What will I do in this video?
 
-### Step 2: Install Magento 2 on Docker container.
+1. I skip the step installing Git on windows 10 Pro 64 bit.
+2. I skip the step enabling the Virtualization on my computer.
+3. I install Docker CE 17.06.2 on the Windows 10 Pro 64bit
+4. I create the docker containers from docker-compose.yml
+5. I install Magento 2.2.6 with Docker
 
-1. Create a host for running Magento 2
+Okie, let's go.
 
-	- On your Windows 10, go to the path C:\Windows\System32\drivers\etc, open the hosts file
-	- Insert the new row: 127.0.0.1 magento.giaphugroup.com and press the ctrl + s for saving the new data. If you can't save the hosts file, please change the permission.
-	- On your browser, press https://localhost:10000, log in with the account information:
-		- Username: root
-		- Password: root
-	- Create new virtual host
+Let's do this practice, you need to follow steps by step:
 
-2. Download Magento 2.
+## Step 1: Install Docker CE 17.06.2 on the Windows 10 Pro 64bit
+Go to the link https://docs.docker.com/docker-for-windows/release-notes/#docker-community-edition-17062-ce-win27-2017-09-06 for downloading the docker CE 17.06.2
 
-	- See https://magento.com/tech-resources/download
-	- You need to have an account here, please sign up if you have not yet.
-	- Download the Magento 2 latest.
-	- Copy the Magento zip file to the path, where magento.giaphugroup.com point to
-	- Unzip the Magento zip file.
+## Step 2: Create the docker containers from docker-compose.yml
+- Before creating the docker containers, you must share the local drives where you will save the source codes for your projects. Go to Docker → Settings → Shared Drivers, select the local drives you want to be available to your containers.
+- Move to the local drive that you are working on it, don't use the C drive, because all your data will be lost if you re-install windows.
+- Git clone https://github.com/php-cuong/docker-magento2-lamp.git
+- Open the docker-compose.yml file and change volumes following the path on your computer
+- Create the docker containers from docker-compose.yml file
+Run the command line: docker-compose up -d
+- Let's see the images on your computer
+Run the command line: docker images
+- Let's see the containers on your computer
+Run the command line: docker ps -a
 
-3. Create a database
+## Step 3: Install Magento 2.2.6 with Docker
+- Before downloading and installing Magento 2.2.6, you must sure the server meet the minimum following requirements:
+Apache 2.4
+MySQL 5.7
+PHP 7.0.13–7.0.x or 7.1.x
+- Accessing the server where you will install Magento 2.2.6
+1. Where having the PHP, Apache2, Webmin
+Run the command line: docker exec -it apache2_service bin/bash
+php -v, apache2 -v
+Webmin: https://127.0.0.1:10000
+username: root
+password: root
 
-	- On your browser, press https://localhost:8080, log in with the account information:
-		- Username: root
-		- Password: giaphugroup
-	- Create the database name magento.2.1.7.
-	- Another way, I use the HeidiSQL software connect to mysql on my localhost
-	- If you do not install this software yet, please see https://www.heidisql.com/download.php
+2. Where having the MySQL
+Run the command line: docker exec -it mysql_service bin/bash
+Run the command line: mysql -u root -p, enter the password "giaphugroup"
+Create the new database named magento.2.2.6
+- Downloading the Magento 2.2.6, go to the link https://magento.com/tech-resources/download
+- On your windows, move to the D drive, create the folder named magento/2.2.x/2.2.6, then copy the zip file just downloaded to this folder and unzip the file.
+- Create a host for running Magento 2.3
+On your Windows 10 Pro 64bit, go to the path C:\Windows\System32\drivers\etc, open the hosts file
+Insert the new row: 127.0.0.1 magento-en.2.2.6.giaphugroup.com and press the ctrl + s for saving the new data. If you can't save the hosts file, please change the permission.
+On your browser, press https://localhost:10000, log in with the account information:
+Username: root
+Password: root
+Then Go to the Webmin → Servers → Apache Webserver → Create virtual host → Create a New Virtual Server
+- Accessing the container has the PHP, Apache2, Webmin. Then restart apache2
+Run the command line: service apache2 restart
+- Install Magento 2.2.6
+On your browser, press http://magento-en.2.2.6.giaphugroup.com
+The information for connecting to mysql.
+host: mysql
+username: root
+password: giaphugroup
+database: magento.2.2.6
+- Deploy static content
+Run the command line: php bin/magento setup:static-content:deploy
 
-4. Install Magento 2
+## Let's install the sample data for Magento 2 please see the practice http://bit.ly/2OKBBwK
 
-	- On your browser press http://magento.giaphugroup.com
-	- The information for connecting to mysql.
-		- host: mysql
-		- username: root
-		- password: giaphugroup
-		- database: magento.2.1.7
-	- Finish the steps for installing Magento 2.
+Thank you for your watching. If you have any questions about this practice, please feel free to leave a comment below.
 
-### Step 3: ssh into the apache2_service container
+Don't forget to like, comment, share my videos and subscribe to my channel for getting the latest videos.
 
-	- docker exec -it apache2_service bin/bash
-	- cd /var/www/html/
-	- php bin/magento setup:static-content:deploy
-	- php bin/magento cache:flush
-	- php bin/magento cache:clean
-
-### Step 4: Test and see the results
-
-## Do not hesitate to contact me if you need me to join your Magento project. My rate is $25/hour in Magento 1 and $30/hour in Magento 2.
-
-### Contact with the owner of this extension
-	- skype: cuongnq87
-	- facebook: https://www.facebook.com/giaphugroupcom/
-	- email: bestearnmoney87@gmail.com
+Please do not hesitate to contact me, if you need me to join your Magento project. My rate is $25/hour in Magento 1 and $30/hour in Magento 2.
