@@ -90,11 +90,11 @@ The information for connecting to mysql.
 - password: giaphugroup
 - database: magento.2.2.6
 
-- Deploy static content
-SSH to the container named apache2_service: docker exec -it --user www-data apache2_service bin/bash
-Run the following command lines: 
-php bin/magento setup:di:compile
-php bin/magento setup:static-content:deploy -f
+- Deploy static content:
+- SSH to the container named apache2_service: docker exec -it --user www-data apache2_service bin/bash
+- Run the following command lines: 
+- php bin/magento setup:di:compile
+- php bin/magento setup:static-content:deploy -f
 
 ## Let's install the sample data for Magento 2 please see the practice http://bit.ly/2OKBBwK
 
