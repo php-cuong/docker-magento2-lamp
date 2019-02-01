@@ -54,7 +54,7 @@ PHP 7.0.13–7.0.x or 7.1.x
 - Accessing the server where you will install Magento 2.2.6
 
 1. Where having the PHP, Apache2, Webmin
-- Run the command line: docker exec -it apache2_service bin/bash
+- Run the command line: docker exec -it --user root apache2_service bin/bash
 - php -v, apache2 -v
 - Webmin: https://127.0.0.1:10000
 - username: root
@@ -91,7 +91,10 @@ The information for connecting to mysql.
 - database: magento.2.2.6
 
 - Deploy static content
-Run the command line: php bin/magento setup:static-content:deploy
+SSH to the container named apache2_service: docker exec -it --user www-data apache2_service bin/bash
+Run the following command lines: 
+php bin/magento setup:di:compile
+php bin/magento setup:static-content:deploy -f
 
 ## Let's install the sample data for Magento 2 please see the practice http://bit.ly/2OKBBwK
 
